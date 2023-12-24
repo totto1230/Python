@@ -32,7 +32,7 @@ def get_reaches(all_websites):
 
 def check_websites(websites_heal,web_notrec):
     shops = []
-    not_reach=[]
+    not_reach=web_notrec
     not_shop=[]
     selectors = [
     'a[href*="cart"]',           # Links with "cart" in href attribute
