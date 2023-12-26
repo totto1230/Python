@@ -9,7 +9,7 @@ import os
 
 def get_websites():
     # opening the file in read mode, replace 'file_name' with the actual name of your file
-    with open('file_name', 'r') as archivo:
+    with open('test_webs.txt', 'r') as archivo:
         lineas = archivo.read().splitlines()
     websites = [linea for linea in lineas]
     size=len(websites)
@@ -56,7 +56,9 @@ def check_websites(websites_heal,web_notrec):
     'a[aria-label*="Cart"]',                # Matches links with "Cart" in aria-label attribute
     'a[aria-label*="Shopping"]',             # Matches links with "Shopping" in aria-label attribute
     'a.minicart-link',
-    'div.minicart a.minicart-link'  # Matches cart link
+    'div.minicart a.minicart-link',  # Matches cart link
+    'a:contains("cart")',
+    'div[class*="minicart-link"] a'
     ] 
     combined_selector = ', '.join(selectors)
     i=1
@@ -106,8 +108,7 @@ def check_websites(websites_heal,web_notrec):
         print(f"{noshop} is not a shop ")
 
 
-
-
-websites_all = get_websites()
-websites_reach,not_reach= get_reaches(websites_all)
-check_websites(websites_reach,not_reach)
+if __name__ == "__main__":
+   websites_all = get_websites()
+   websites_reach,not_reach= get_reaches(websites_all)
+   check_websites(websites_reach,not_reach)
