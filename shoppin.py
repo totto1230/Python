@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Author: Your Name: https://github.com/totto1230
+# Author:  https://github.com/totto1230
 # This is a script to identify webstores 
 
 from bs4 import BeautifulSoup
