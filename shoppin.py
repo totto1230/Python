@@ -9,7 +9,7 @@ import os
 
 def get_websites():
     # opening the file in read mode, replace 'file_name' with the actual name of your file
-    with open('test_webs.txt', 'r') as archivo:
+    with open('file_name', 'r') as archivo:
         lineas = archivo.read().splitlines()
     websites = [linea for linea in lineas]
     size=len(websites)
