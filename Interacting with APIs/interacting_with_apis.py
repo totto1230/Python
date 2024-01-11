@@ -36,6 +36,10 @@ def get_gif(splitted):
     url = ''.join(urls)
     webbrowser.open(url)
 
-phrase = get_phrase()
-splitted = split_phrase(phrase)
-get_gif(splitted)
+def _main():
+    phrase = get_phrase()
+    splitted = split_phrase(phrase)
+    get_gif(splitted)
+
+if __name__ == "__main__":
+    _main()
